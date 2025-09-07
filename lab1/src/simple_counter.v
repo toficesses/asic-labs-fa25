@@ -5,15 +5,19 @@ module simple_counter (
 );
     reg [1:0] counter;
 
-    always @(________ or ________) begin
-        if (____) begin // TODO
+    always @(posedge reset or posedge clk) begin
+        if (reset == 1'b1) begin // TODO
             counter <= 2'b00;
         end else begin
-            case (____) // TODO
-                // TODO
+            case (counter) // TODO
+                // 4 possible cases
+                2'b00: counter = 2'b01;
+                2'b01: counter = 2'b10;
+                2'b10: counter = 2'b11;
+                2'b11: counter = 2'b00;
             endcase
         end
     end
 
-    ____ counter_out = ____; // TODO
+    assign counter_out = counter; // TODO
 endmodule

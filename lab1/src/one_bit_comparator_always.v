@@ -6,12 +6,18 @@ module one_bit_comparator_always (
     output reg equal
 );
     always @(*) begin
-        if (____) begin // TODO
-            // TODO
-        end else if (____) begin // TODO
-            // TODO
+
+	// preassign to 0
+	equal = 1'b0;
+        less = 1'b0;
+        greater = 1'b0;
+
+        if (a > b) begin
+            greater = 1'b1;
+        end else if (a < b) begin
+            less = 1'b1;
         end else begin
-            // TODO
+            equal = 1'b1;
         end
     end
 endmodule
