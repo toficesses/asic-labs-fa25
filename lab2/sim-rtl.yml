@@ -4,7 +4,7 @@ sim.inputs:
     - "src/fir.v"
     - "src/EECS151.v"
     - "src/addertree.v"
-    - "src/fir_tb.v" # TODO replace this with fir_tb_file.v
+    - "src/fir_tb_file.v" # TODO replace this with fir_tb_file.v
   timescale: "1ns/10ps"
   options:
     - "-notice"
@@ -14,7 +14,7 @@ sim.inputs:
     - "-debug"
     - "-sverilog"
   top_module: "fir"
-  tb_name: "fir_tb"
+  tb_name: "fir_tb_file"
   defines: 
     - "CLOCK_PERIOD=1.00"
   defines_meta: append

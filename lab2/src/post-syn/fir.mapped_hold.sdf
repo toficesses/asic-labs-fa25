@@ -830,7 +830,7 @@
      (INSTANCE delay_step1.q_reg\[3\])
      (DELAY
         (ABSOLUTE
-          (PORT CK (::1000.0))
+          (PORT CK (::500.0))
           (PORT D (::0.0))
           (IOPATH CK Q (::451) (::489))
           (IOPATH CK QN (::502) (::445))
@@ -846,7 +846,7 @@
      (INSTANCE delay_step1.q_reg\[2\])
      (DELAY
         (ABSOLUTE
-          (PORT CK (::1000.0))
+          (PORT CK (::500.0))
           (PORT D (::0.0))
           (IOPATH CK Q (::451) (::489))
           (IOPATH CK QN (::502) (::445))
@@ -862,7 +862,7 @@
      (INSTANCE delay_step1.q_reg\[0\])
      (DELAY
         (ABSOLUTE
-          (PORT CK (::1000.0))
+          (PORT CK (::500.0))
           (PORT D (::0.0))
           (IOPATH CK Q (::451) (::489))
           (IOPATH CK QN (::502) (::445))
@@ -878,7 +878,7 @@
      (INSTANCE delay_step1.q_reg\[1\])
      (DELAY
         (ABSOLUTE
-          (PORT CK (::1000.0))
+          (PORT CK (::500.0))
           (PORT D (::0.0))
           (IOPATH CK Q (::451) (::489))
           (IOPATH CK QN (::502) (::445))

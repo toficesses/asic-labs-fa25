@@ -5,17 +5,17 @@
         "module",
         1
     ],
-    "decoder_4_to_16_tb": [
-        "decoder_4_to_16_tb",
-        "x97AA",
-        "module",
-        5
-    ],
     "d_flip_flop": [
         "d_flip_flop",
         "zyzfg",
         "module",
         3
+    ],
+    "decoder_4_to_16_tb": [
+        "decoder_4_to_16_tb",
+        "x97AA",
+        "module",
+        5
     ],
     "...MASTER...": [
         "SIM",

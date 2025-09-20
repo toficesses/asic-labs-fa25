@@ -1,4 +1,10 @@
 {
+    "d_flip_flop": [
+        "d_flip_flop",
+        "zyzfg",
+        "module",
+        3
+    ],
     "std": [
         "std",
         "reYIK",
@@ -16,11 +22,5 @@
         "amcQw",
         "module",
         4
-    ],
-    "d_flip_flop": [
-        "d_flip_flop",
-        "zyzfg",
-        "module",
-        3
     ]
 }

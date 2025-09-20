@@ -5,12 +5,6 @@
         "module",
         1
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        4
-    ],
     "one_bit_comparator_always_tb": [
         "one_bit_comparator_always_tb",
         "kK61v",
@@ -22,5 +16,11 @@
         "zyzfg",
         "module",
         3
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        4
     ]
 }

@@ -5,7 +5,7 @@ sim.inputs:
     - "src/fir_tb.v"
   level: "syn"
   timing_annotated: true
-  sdf_file: "src/post-syn/fir.mapped.sdf"
+  sdf_file: "src/post-syn/fir.mapped_hold.sdf"
   all_regs: "src/post-syn/find_regs_paths.json"
   seq_cells: "src/post-syn/find_regs_cells.json"
   timescale: "1ns/10ps"

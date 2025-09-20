@@ -1,0 +1,377 @@
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'hammer.technology.sky130'
+[<global>] Level.WARNING: Key technology.sky130.sky130_nda has a type str is not yet implemented
+[<global>] Level.WARNING: Key technology.sky130.openram_lib has a type str is not yet implemented
+[<global>] Level.WARNING: Key technology.sky130.dffram_lib has a type Optional[str] is not yet implemented
+[<global>] Level.WARNING: Key technology.sky130.pdk_home has a type Optional[str] is not yet implemented
+[<global>] Level.WARNING: Key technology.sky130.lvs_deck_sources has a type Optional[list[str]] is not yet implemented
+[<global>] Level.WARNING: Key technology.sky130.io_file has a type str is not yet implemented
+[tech] Level.WARNING: The install path: /path/to/skywater-src-nda does not exist, looked at key technology.sky130.sky130_nda
+[tech] Level.INFO: Loaded Sky130 Tech
+[<global>] Level.INFO: Starting simulation with tool 'vcs'
+[sim] Level.DEBUG: Running sub-step 'write_gl_files'
+[sim] Level.DEBUG: Running sub-step 'run_vcs'
+[sim] Level.DEBUG: Executing subprocess: /home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/bin/vcs -full64 -lca -debug_access+all -timescale=1ns/10ps -CC -I$(VCS_HOME)/include -notice -line +lint=all,noVCDE +v2k -debug -sverilog /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/EECS151.v /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut.v /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v +define+FUNCTIONAL +define+UNIT_DELAY=#1 +define+CLOCK_PERIOD=1.00 +notimingcheck +delay_mode_zero -top dut_tb -o /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Warning-[DBGACC_DBG] Multiple debug options being used
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   The debug switches '-debug_access' and '-debug*' are being used together.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   For better performance, consider using only '-debug_access'.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Error-[VERDI_VCS_MM] Possible VERDI_HOME and VCS_HOME mismatch
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   The Verdi tab and pli.a cannot be added to the 'vcs' compile command because
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   the file '/pli.a' could not be found.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Please check to make sure VERDI_HOME and VCS_HOME point to installations
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   that are either both 32-bits or both 64-bits.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:                          Chronologic VCS (TM)
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:          Version P-2019.06_Full64 -- Sun Sep 14 15:28:24 2025
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:                Copyright (c) 1991-2019 by Synopsys Inc.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:                          ALL RIGHTS RESERVED
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: This program is proprietary and confidential information of Synopsys Inc.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: and may be used and disclosed only as authorized in a license agreement
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: controlling such use and disclosure.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Warning-[LCA_FEATURES_ENABLED] Usage warning
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   LCA features enabled by '-lca' argument on the command line.  For more
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   information regarding list of LCA features please refer to Chapter "LCA
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   features" in the VCS Release Notes
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Warning-[DEBUG_DEP] Option will be deprecated
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   The option 'debug=4' will be deprecated in a future release.  Please use
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   '-debug_acc+pp+f+fn+dmptf -debug_region+cell+encrypt' instead.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Parsing design file '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/EECS151.v'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Parsing design file '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut.v'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Parsing design file '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[NS] Null statement
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v, 29
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Null statement is used in following verilog source.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Source info:   @(negedge clk);
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[NS] Null statement
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v, 44
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Null statement is used in following verilog source.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Source info:   repeat(2) @(negedge clk);
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Parsing design file '/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4519
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4518
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) b    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4519
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4573
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4571
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4573
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4573
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4572
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 1    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4573
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4627
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4625
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 1    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4627
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4627
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4626
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 0    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4627
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4688
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4687
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x1) ?    ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4688
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x1) ?    0    ?    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4693
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4691
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 0    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4693
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4693
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4692
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 1    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4693
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4699
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4698
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    f    ?    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4699
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    f    ?    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4701
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4700
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    b    *    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4701
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    b    *    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4736
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4735
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x1) ?    ?    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4736
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x1) ?    0    ?    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4741
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4739
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 0    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4741
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4741
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4740
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) 1    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4741
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    (x0) ?    0    0    x    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4747
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4746
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    f    ?    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4747
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    f    ?    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4749
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4748
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    b    *    0    ?    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4749
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    b    *    ?    0    ?    : ?: -;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4813
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4811
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    1    1    ?    0    : ?: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4813
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    ?    1    0    : ?: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4814
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4812
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    1    0    0    ?    : ?: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4814
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    ?    ?    1    : ?: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4820
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4816
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    0    ?    *    0    : 1: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4820
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    1    *    0    : 1: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4821
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4817
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    0    ?    0    *    : 0: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4821
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    0    0    *    : 0: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4838
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4836
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    1    1    ?    0    : ?: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4838
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    ?    1    ?    : ?: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4839
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4837
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    1    0    0    ?    : ?: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4839
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    ?    0    1    : ?: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4845
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4841
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    0    ?    *    0    : 1: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4845
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    1    *    0    : 1: 1;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[OUDPE] UDP Entries Overlap
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v, 4846
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Following UDP entries overlap each other as possibly they could have exactly
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   same set of input and output values.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4842
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    0    ?    0    *    : 0: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/verilog/sky130_scl_9T.v",
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   4846
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   ?    ?    0    0    *    : 0: 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Top Level Modules:
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:        dut_tb
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: TimeScale is 1 ns / 1 ps
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Lint-[WMIA-L] Width mismatch in assignment
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v, 10
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Width mismatch between LHS and RHS is found in assignment:
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   The following 32-bit wide expression is assigned to a 1-bit LHS target:
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Source info: clk = 0;
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG:   Expression: clk
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Starting vcs inline pass...
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: 1 module and 0 UDP read.
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Generating code for _VCSgd_reYIK
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: Generating code for _VCSgd_ud4N8
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: recompiling module dut_tb
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: make[1]: Entering directory '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/csrc'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: make[1]: Leaving directory '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/csrc'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: make[1]: Entering directory '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/csrc'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: if [ -x /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv ]; then chmod -x /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv; fi
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: g++  -o /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv    -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/linux64/lib -L/home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _2587133_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive          /home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv up to date
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: make[1]: Leaving directory '/home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/csrc'
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: /home/ff/eecs151/hammer-tools/synopsys/vcs/P-2019.06/bin/vcs: line 30656: 2587353 Segmentation fault      (core dumped) ${TOOL_HOME}/bin/cfs_ident_exec -f ${XML_INPUT_EXE} -o "${fsearchDir}/idents_tapi.xml" -o_SrcFile "${dirSrcFiles}/src_files_c" ${all_dyn_libs} > tapi_xml_writer.log
+[sim] [Exec ...019.06/bin/vcs -full64 -lca -d...] Level.DEBUG: CPU time: .365 seconds to compile + .319 seconds to elab + .381 seconds to link
+[sim] Level.DEBUG: Running sub-step 'run_simulation'
+[sim] Level.DEBUG: Executing subprocess: /home/tmp/eecs151-acf/asic-labs-fa25/lab2/build/sim-rundir/simv
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Notice: timing checks disabled with +notimingcheck at compile-time
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Chronologic VCS simulator copyright 1991-2019
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Contains Synopsys proprietary information.
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Compiler version P-2019.06_Full64; Runtime version P-2019.06_Full64;  Sep 14 15:28 2025
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: VCD+ Writer P-2019.06_Full64 Copyright (c) 1991-2019 by Synopsys Inc.
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: $finish called from file "/home/tmp/eecs151-acf/asic-labs-fa25/lab2/src/dut_tb.v", line 47.
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: $finish at simulation time                 8000
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG:            V C S   S i m u l a t i o n   R e p o r t
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Time: 8000 ps
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: CPU Time:      0.210 seconds;       Data structure size:   0.0Mb
+[sim] [Exec ...im-rundir/simv ] Level.DEBUG: Sun Sep 14 15:28:29 2025

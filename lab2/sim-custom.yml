@@ -1,8 +1,9 @@
 # RTL Simulation Variables
 sim.inputs:
   input_files:
-    - "src/EECS151.v"
-    - #TODO fill out with custom testebench file
+    - "src/EECS151.v"   # required by dut.v
+    - "src/dut.v"
+    - "src/dut_tb.v"
   timescale: "1ns/10ps"
   options:
     - "-notice"
@@ -11,8 +12,8 @@ sim.inputs:
     - "+v2k"
     - "-debug"
     - "-sverilog"
-  top_module: #TODO name of DUT module
-  tb_name: #TODO name of tb
-  defines: 
-    - "CLOCK_PERIOD=1.00"
+  top_module: "dut"        # <-- MODULE NAME from 'module dut (...);'
+  tb_name: "dut_tb"        # <-- MODULE NAME from 'module dut_tb();'
+  defines:
+    - "CLOCK_PERIOD=1.00"  # 1 ns period (so 1 GHz); change if you want
   defines_meta: append

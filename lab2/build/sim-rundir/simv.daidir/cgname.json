@@ -1,0 +1,158 @@
+{
+    "REGISTER_R_N4_22": [
+        "REGISTER_R_N4_22",
+        "YAQWk",
+        "module",
+        5
+    ],
+    "CLKINVX2": [
+        "CLKINVX2",
+        "CFVW8",
+        "module",
+        16
+    ],
+    "altos_dff_err": [
+        "altos_dff_err",
+        "zrRAN",
+        "udp",
+        25
+    ],
+    "fir": [
+        "fir",
+        "ujt4N",
+        "module",
+        9
+    ],
+    "SdfDummyMod": [
+        "SdfDummyMod",
+        "hsqE0",
+        "module",
+        1
+    ],
+    "REGISTER_R_N4_21": [
+        "REGISTER_R_N4_21",
+        "hK0Sm",
+        "module",
+        6
+    ],
+    "AND2X2": [
+        "AND2X2",
+        "deaHL",
+        "module",
+        13
+    ],
+    "altos_dff": [
+        "altos_dff",
+        "aHiUc",
+        "udp",
+        26
+    ],
+    "REGISTER_R_N4_20": [
+        "REGISTER_R_N4_20",
+        "bpNf4",
+        "module",
+        7
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
+    "addertree_NUM_INPUT_BITS4_NUM_OUTPUT_BITS16": [
+        "addertree_NUM_INPUT_BITS4_NUM_OUTPUT_BITS16",
+        "IVNDg",
+        "module",
+        3
+    ],
+    "BUFX16": [
+        "BUFX16",
+        "irMF2",
+        "module",
+        14
+    ],
+    "REGISTER_R_N4": [
+        "REGISTER_R_N4",
+        "G3gDV",
+        "module",
+        4
+    ],
+    "REGISTER_R_N4_19": [
+        "REGISTER_R_N4_19",
+        "sf17H",
+        "module",
+        8
+    ],
+    "DFFX1": [
+        "DFFX1",
+        "nJRZa",
+        "module",
+        18
+    ],
+    "fir_tb": [
+        "fir_tb",
+        "aMFWh",
+        "module",
+        10
+    ],
+    "ADDFX1": [
+        "ADDFX1",
+        "N0EII",
+        "module",
+        11
+    ],
+    "ADDHX1": [
+        "ADDHX1",
+        "LWuby",
+        "module",
+        12
+    ],
+    "CLKINVX1": [
+        "CLKINVX1",
+        "FeYIE",
+        "module",
+        15
+    ],
+    "CLKXOR2X1": [
+        "CLKXOR2X1",
+        "aHLPd",
+        "module",
+        17
+    ],
+    "INVX16": [
+        "INVX16",
+        "TeMjn",
+        "module",
+        19
+    ],
+    "INVX2": [
+        "INVX2",
+        "uw12y",
+        "module",
+        20
+    ],
+    "INVX8": [
+        "INVX8",
+        "CHUp9",
+        "module",
+        21
+    ],
+    "NOR2X1": [
+        "NOR2X1",
+        "esUc7",
+        "module",
+        22
+    ],
+    "OR2X2": [
+        "OR2X2",
+        "AMGuT",
+        "module",
+        23
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        24
+    ]
+}
