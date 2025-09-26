@@ -1,25 +1,57 @@
 `include "/home/ff/eecs151/verilog_lib/EECS151.v"
 
+//=========================================================================
+// RTL Model Divider (Algorithm 1)
+//
+// Author: Tofic Esses
+//-------------------------------------------------------------------------
+
+// top level module
 module divider #(
-    WIDTH = 4
+    parameter W = 32
 ) (
   input clk,
+  input reset,
 
-  input start,
-  output done,
+  input [W-1:0] dividend,
+  input [W-1:0] divisor,
 
-  input [WIDTH-1:0] dividend,
-  input [WIDTH-1:0] divisor,
-  output [WIDTH-1:0] quotient,
-  output [WIDTH-1:0] remainder
+  input operands_val,
+  output operands_rdy,
+
+  output [W-1:0] quotient,
+  output [W-1:0] remainder,
+
+  output result_val,
+  input result_rdy
 );
 
-  // Feel free to change the code as long as your final code implements a divider
-  // Check the algorithm described in the slides (URL in the spec)
-  // Pay attention to the block diagram(s)
+  // Internal control signals
+  wire load;      
+  wire iter_en;
 
-  assign quotient  = 0;
-  assign remainder = 0;
-  assign done = 0;
+  // Instantiate control module
+  divider_control #( .W(W) ) ctrl (
+      .clk(clk),
+      .reset(reset),
+      .operands_val(operands_val),
+      .result_rdy(result_rdy),
+      .operands_rdy(operands_rdy),
+      .result_val(result_val),
+      .load(load),
+      .iter_en(iter_en)
+  );
+
+  // Instantiate datapath module
+  divider_datapath #( .W(W) ) dp (
+      .clk(clk),
+      .reset(reset),
+      .load(load),
+      .iter_en(iter_en),
+      .divisor(divisor),
+      .dividend(dividend),
+      .quotient(quotient),
+      .remainder(remainder)
+  );
 
 endmodule

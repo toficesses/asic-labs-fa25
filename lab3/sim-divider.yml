@@ -2,6 +2,8 @@
 sim.inputs:
   input_files:
     - "src/divider.v"
+    - "src/divider_datapath.v"
+    - "src/divider_control.v"
     - "src/divider_testbench.v"
     - "src/EECS151.v"
   timescale: "1ns/10ps"

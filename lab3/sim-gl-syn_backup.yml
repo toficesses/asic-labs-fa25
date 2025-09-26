@@ -1,7 +1,7 @@
 # Post-Synthesis Gate-Level Simulation Variables
 sim.inputs:
   input_files:
-    - "src/divider_testbench.v"
+    - "src/gcd_testbench.v"
   input_files_meta: append
   level: "syn"
   timing_annotated: true
@@ -14,8 +14,8 @@ sim.inputs:
     - "-debug"
     - "+neg_tchk"
     - "-sverilog"
-  top_module: "divider"
-  tb_name: "divider_testbench"
-  tb_dut: "dut"
+  top_module: "gcd"
+  tb_name: "gcd_testbench"
+  tb_dut: "gcd"
   defines: 
     - "CLOCK_PERIOD=20.00000"
