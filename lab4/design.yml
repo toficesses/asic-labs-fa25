@@ -5,6 +5,8 @@ gcd.verilogSrc: &VERILOG_SRC
   - "src/gcd_datapath.v"
   - "src/gcd_control.v"
   - "src/fifo.v"
+  - "src/fifo_datapath.v"
+  - "src/fifo_control.v"
 
 # Specify clock signals
 vlsi.inputs.clocks: [

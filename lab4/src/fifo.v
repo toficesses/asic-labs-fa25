@@ -1,8 +1,10 @@
 //=========================================================================
-// FIFO Template
-//-------------------------------------------------------------------------
+// FIFO Top-Level Module
 //
-//`include "EECS151.v"
+// Author: Tofic Esses
+//-------------------------------------------------------------------------
+
+`include "/home/ff/eecs151/verilog_lib/EECS151.v"
 
 module fifo #(parameter WIDTH = 8, parameter LOGDEPTH = 3) (
     input clk,
@@ -20,22 +22,34 @@ module fifo #(parameter WIDTH = 8, parameter LOGDEPTH = 3) (
 
 localparam DEPTH = (1 << LOGDEPTH);
 
-// the buffer itself. Take note of the 2D syntax.
-reg [WIDTH-1:0] buffer [DEPTH-1:0];
-// read pointer, write pointer
-reg [LOGDEPTH-1:0] rptr, wptr;
-// is the buffer full? This is needed for when rptr == wptr
-reg full;
+// internal control signals
+wire [LOGDEPTH-1:0] rptr, wptr;
+wire r_en, w_en;
 
-// Define any additional regs or wires you need (if any) here
+// instantiate the control module
+fifo_control #( .LOGDEPTH(LOGDEPTH) ) ctrl (
+    .clk(clk),
+    .reset(reset),
+    .enq_val(enq_val),
+    .enq_rdy(enq_rdy),
+    .deq_val(deq_val),
+    .deq_rdy(deq_rdy),
+    .r_en(r_en),
+    .w_en(w_en),
+    .rptr(rptr),
+    .wptr(wptr)
+);
 
-// use "fire" to indicate when a valid transaction has been made
-wire enq_fire;
-wire deq_fire;
-
-assign enq_fire = enq_val & enq_rdy;
-assign deq_fire = deq_val & deq_rdy;
-
-// Your code here (don't forget the reset!)
+// instantiate the datapath module
+fifo_datapath #( .WIDTH(WIDTH), .LOGDEPTH(LOGDEPTH) ) dp (
+    .clk(clk),
+    .reset(reset),
+    .r_en(r_en),
+    .w_en(w_en),
+    .enq_data(enq_data),
+    .deq_data(deq_data),
+    .rptr(rptr),
+    .wptr(wptr)
+);
 
 endmodule

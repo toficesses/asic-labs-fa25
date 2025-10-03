@@ -5,6 +5,8 @@ sim.inputs:
     - "src/gcd_datapath.v"
     - "src/gcd_control.v"
     - "src/fifo.v"
+    - "src/fifo_datapath.v"
+    - "src/fifo_control.v"
     - "src/gcd_coprocessor_testbench.v"
   timescale: "1ns/10ps"
   options:
